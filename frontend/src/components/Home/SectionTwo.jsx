@@ -68,10 +68,12 @@ const SectionTwo = ({ id }) => {
   return (
     <section id={id} ref={section2Ref} className="relative w-screen h-screen">
       {/* //title */}
-      <div className="relative pt-[16vh] left-0 w-[37.5vw] ">
+      <div className="relative pt-[10vh] lg:pt-[16vh] left-0 lg:w-[37.5vw] ">
         <h1
           ref={section2TitleRef}
-          className="will-change-transform px-10 pl-40 font-semibold text-6xl font-Grotesk leading-normal"
+          className="will-change-transform px-10 text-2xl 
+          lg:pl-40 
+          lg:font-semibold lg:text-6xl font-Grotesk leading-normal"
         >
           Showcase, Sell,{" "}
           <span className="text-red-900">& acquire arts to</span> our
@@ -79,10 +81,10 @@ const SectionTwo = ({ id }) => {
         </h1>
       </div>
       {/* //paragraph */}
-      <div className="relative pt-[8vh] pl-40 pointer-events-none w-[35vw] ">
+      <div className="relative pt-[2vh] px-10 lg:pt-[8vh] lg:pl-40 pointer-events-none lg:w-[35vw] ">
         <h1
           ref={section2Title2Ref}
-          className="will-change-transform font-normal text-xl font-Grotesk leading-normal"
+          className="will-change-transform font-normal text-m lg:text-xl font-Grotesk leading-normal"
         >
           Dynamic community where sellers and buyers seamlessly merge. ArtFusion
           brings together creators and enterhusiasts to share creativity.
@@ -91,11 +93,11 @@ const SectionTwo = ({ id }) => {
       {/* //button join us */}
       <div
         ref={section2BtnRef}
-        className="relative pt-[8vh] pl-40 pointer-events-auto flex space-x-5"
+        className="relative pt-[43vh]  lg:pt-[8vh] px-10 lg:pl-40 pointer-events-auto flex flex-col lg:flex-row space-x-1  lg:space-x-5"
       >
         <Link
           to="/signup"
-          className=" flex justify-center py-2 px-15 border border-transparent 
+          className=" flex justify-center items-center h-max w-30  py-2 px-2 lg:px-5 lg:py-1  border border-transparent 
 							rounded-4xl shadow-sm text-xl font-medium text-white bg-black font-Grotesk leading-normal
 							 hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-offset-2 will-change-transform
 							  focus:ring-emerald-500 transition duration-200 ease-in-out disabled:opacity-50"
@@ -104,7 +106,7 @@ const SectionTwo = ({ id }) => {
         </Link>
         <Link
           to="/shop"
-          className=" flex justify-center py-2 px-15 border-transparent 
+          className=" flex justify-center items-center lg:min-h-max w-30 lg:min-w-max py-5 px-2 lg:px-5 lg:py-1 border-transparent 
 							rounded-4xl text-xl font-medium hover:text-white hover:bg-black font-Grotesk leading-normal
 							 bg-transparent  text-black will-change-transform
 						 transition duration-200 ease-in-out disabled:opacity-50"

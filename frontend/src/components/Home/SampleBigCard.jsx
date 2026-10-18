@@ -4,8 +4,8 @@ const SampleBigCard = ({ category }) => {
     id,
     imageUrl,
     className = "",
-    name = "your title here",
-    description = "your describtion here",
+    name = "title",
+    description = "describtion",
     buttonText = "Read more",
     onButtonClick,
   } = category;
@@ -13,9 +13,9 @@ const SampleBigCard = ({ category }) => {
   return (
     <section
       data-id={id}
-      className={`w-[40vw] cursor-grab select-none overflow-hidden rounded-2xl bg-neutral-200 shadow-[0_10px_30px_rgba(0,0,0,0.08)] will-change-transform active:cursor-grabbing ${className}`}
+      className={` w-[40vw] lg:w-[40vw] cursor-grab select-none overflow-hidden rounded-2xl bg-neutral-200 shadow-[0_10px_30px_rgba(0,0,0,0.08)] will-change-transform active:cursor-grabbing ${className}`}
     >
-      <div className="h-[45vh] overflow-hidden bg-[#1f3cff]">
+      <div className="h-[20vh] lg:h-[45vh] overflow-hidden bg-[#1f3cff]">
         <img
           src={imageUrl}
           alt={name}

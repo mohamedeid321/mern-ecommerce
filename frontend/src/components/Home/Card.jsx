@@ -3,7 +3,10 @@ const Card = ({ category }) => {
   return (
     <div className={`${category.className}`} data-id={category.id}>
       <Link to={`/category${category.href || ""}`}>
-        <div className="relative overflow-hidden group w-[14vw] h-[26vh] cursor-pointer rounded-[1vw] bg-amber-300">
+        <div
+          className="relative overflow-hidden group w-[26vw] h-[14vh]
+              lg:w-[14vw] lg:h-[26vh] cursor-pointer rounded-[1vw] bg-amber-300"
+        >
           <div
             className="absolute inset-0  bg-gradient-to-b from-transparent to-gray-900 
             transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 z-10"

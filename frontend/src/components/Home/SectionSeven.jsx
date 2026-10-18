@@ -280,7 +280,7 @@ export default function SectionSeven({ id, bounce = 0.45, gravity = 1.6 }) {
             ))}
           </h2>
           <p data-sub className="mt-3.5 text-xs  tracking-[.16em]">
-            Phone: 01154053377 Mail: mohamedeidomer919@gmail.com
+            Phone: 01154053377 <br /> Mail: mohamedeidomer919@gmail.com
           </p>
         </div>
 

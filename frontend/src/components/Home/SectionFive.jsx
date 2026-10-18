@@ -89,7 +89,7 @@ const SectionFive = ({ id }) => {
             y: finalY[i + j],
             filter: "blur(0px)",
             opacity: 1,
-            duration: 2,
+            duration: 1,
             ease: "power3.out",
           },
           j * 0.4, // الكارت التاني يبدأ بعد 0.2 ثانية
@@ -123,7 +123,7 @@ const SectionFive = ({ id }) => {
       {/*  title */}
       <h1
         ref={TitleRef}
-        className="relative top-0 left-0 will-change-transform text-center font-semibold text-6xl font-Grotesk leading-tight"
+        className="relative top-10 lg:top-0 left-0 will-change-transform text-center font-semibold text-3xl lg:text-6xl font-Grotesk leading-tight"
       >
         Every piece of product <br /> tells a story.
       </h1>
@@ -132,7 +132,7 @@ const SectionFive = ({ id }) => {
       <div className="relative pt-50 flex items-center justify-center pointer-events-none z-10">
         <div
           ref={cardsRef}
-          className=" grid grid-cols-2 grid-rows-2 gap-15 place-items-center "
+          className=" grid grid-cols-2 grid-rows-2 gap-5 lg:gap-15 place-items-center "
         >
           {(categories || []).slice(0, 4).map((category) => (
             <div

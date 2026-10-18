@@ -62,16 +62,17 @@ const SectionOne = ({ id }) => {
       <div className="relative pt-[14vh] mx-auto w-fit pointer-events-none ">
         <h1
           ref={titleRef}
-          className="will-change-transform px-10 py-10 font-normal text-6xl font-Grotesk leading-normal"
+          className="will-change-transform px-20 text-center py-10 lg:px-10 lg:py-10
+           font-normal text-3xl lg:text-6xl font-Grotesk leading-normal"
         >
           A place to find your masterpiece.
         </h1>
       </div>
       {/* //paragraph */}
-      <div className="absolute bottom-[28vh] left-1/2 -translate-x-1/2 pointer-events-none ">
+      <div className="absolute bottom-[25vh] lg:bottom-[28vh] left-1/2 -translate-x-1/2 pointer-events-none ">
         <h1
           ref={title2Ref}
-          className="will-change-transform font-normal text-xl font-Grotesk leading-normal"
+          className="will-change-transform font-normal text-center text-xl lg:text-xl font-Grotesk leading-normal"
         >
           Discover the latest trends in eco-friendly fashion.
         </h1>
@@ -79,7 +80,7 @@ const SectionOne = ({ id }) => {
       {/* //button join us */}
       <div
         ref={btnRef}
-        className="absolute bottom-[20vh] left-1/2 -translate-x-1/2 pointer-events-auto"
+        className="absolute bottom-[15vh] lg:bottom-[20vh] left-1/2 -translate-x-1/2 pointer-events-auto"
       >
         <Link
           to="/signup"

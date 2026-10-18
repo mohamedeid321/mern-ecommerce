@@ -162,7 +162,7 @@ const SectionSix = ({ hero, images, heroColor = "#f26a1b" }) => {
               start: "top bottom", // starts as soon as the section peeks in
               end: `+=${TOTAL * 100}%`,
               scrub: true, // 0.5s of smoothing
-              markers: true,
+              //markers: true,
               invalidateOnRefresh: true, // re-run the function values below on resize
             },
           });

@@ -29,7 +29,7 @@ const SectionThree = ({ id }) => {
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 30%",
+        start: "top 50%",
         end: "+=1000px",
         scrub: true,
         //markers: true,
@@ -40,8 +40,8 @@ const SectionThree = ({ id }) => {
         filter: "blur(3px)",
         opacity: 0,
         y: 40,
-        duration: 1.5,
-        stagger: 0.15, // تتابع دخول الحروف
+        duration: 0.8,
+        stagger: 0.1, // تتابع دخول الحروف
         ease: "power3.out",
       })
       .from(
@@ -63,10 +63,10 @@ const SectionThree = ({ id }) => {
       className="relative w-screen h-screen pointer-events-none "
     >
       {/* //title */}
-      <div className="relative pt-[16vh] left-0 w-[45vw] ">
+      <div className="relative pt-[20vh] lg:pt-[16vh] left-0 lg:w-[45vw] ">
         <h1
           ref={TitleRef}
-          className="will-change-transform px-20 pl-40 font-semibold text-6xl font-Grotesk leading-tight"
+          className="will-change-transform px-20 lg:pl-40 font-semibold text-3xl lg:text-6xl font-Grotesk leading-tight"
         >
           Gateway to <br /> awesome Products.
         </h1>

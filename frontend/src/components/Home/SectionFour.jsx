@@ -25,7 +25,7 @@ const SectionFour = () => {
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 20%",
+        start: "top 40%",
         //markers: true,
       },
     });
@@ -49,7 +49,8 @@ const SectionFour = () => {
       {/*  title */}
       <h1
         ref={TitleRef}
-        className="absolute top-0 left-0 will-change-transform text-center font-semibold text-6xl font-Grotesk leading-tight"
+        className="absolute top-0 left-0 will-change-transform text-center font-semibold 
+        text-3xl lg:text-6xl font-Grotesk leading-tight"
       >
         You will find yourself <br /> among us.
       </h1>
