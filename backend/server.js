@@ -22,6 +22,17 @@ const __dirname = path.resolve();
 app.use(express.json({ limit: "10mb" })); // allows you to parse the body of the request
 app.use(cookieParser());
 
+// connect to the DB before any route (the connection is cached, see lib/db.js)
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.log("DB connection error:", error.message);
+    res.status(500).json({ message: "Database connection failed" });
+  }
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
@@ -29,15 +40,19 @@ app.use("/api/coupons", couponRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+// local only: on Vercel the frontend is served by Vercel itself
+if (!process.env.VERCEL) {
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+    app.get("/*splat", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+    });
+  }
+
+  app.listen(PORT, () => {
+    console.log("Server is running on http://localhost:" + PORT);
   });
 }
 
-app.listen(PORT, () => {
-  console.log("Server is running on http://localhost:" + PORT);
-  connectDB();
-});
+export default app;
