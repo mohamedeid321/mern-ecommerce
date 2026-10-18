@@ -9,7 +9,7 @@ export const connectDB = async () => {
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect(process.env.MONGO_URI, { bufferCommands: false })
+      .connect(process.env.MONGO_URL, { bufferCommands: false })
       .catch((error) => {
         cached.promise = null;
         throw error;
