@@ -66,7 +66,7 @@ const SectionThree = ({ id }) => {
       <div className="relative pt-[20vh] lg:pt-[16vh] left-0 lg:w-[45vw] ">
         <h1
           ref={TitleRef}
-          className="will-change-transform px-20 lg:pl-40 font-semibold text-3xl lg:text-6xl font-Grotesk leading-tight"
+          className="will-change-transform text-center px-10 lg:pl-40 font-semibold text-3xl lg:text-6xl font-Grotesk leading-tight"
         >
           Gateway to <br /> awesome Products.
         </h1>

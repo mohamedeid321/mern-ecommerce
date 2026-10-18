@@ -27,7 +27,7 @@ const SignUpForm = () => {
     signup(formData);
   };
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center font-Grotesk leading-normal">
+    <div className="w-full h-screen pt-10 flex flex-col items-center justify-between  lg:justify-center font-Grotesk leading-normal">
       <div className="z-5 relative w-[70%] ">
         <div className="overflow-hidden mb-10 pb-1">
           <motion.h2
@@ -38,7 +38,7 @@ const SignUpForm = () => {
               ease: [0.22, 1, 0.36, 1],
               delay: 0.5,
             }}
-            className="text-center text-[2vw] font-extrabold text-black"
+            className="text-center text-3xl lg:text-[2vw] font-extrabold text-black"
           >
             Create Account
           </motion.h2>
@@ -184,26 +184,26 @@ const SignUpForm = () => {
             )}
           </motion.button>
         </motion.form>
-      </div>
-      {/* //paragraph to log in */}
-      <motion.p
-        className="mt-8 text-center text-sm text-gray-400"
-        initial={{ x: "-20%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          ease: [0.22, 1, 0.36, 1],
-          duration: 1.5,
-          delay: 1,
-        }}
-      >
-        Already have an account?{" "}
-        <Link
-          to="/login"
-          className="font-medium text-btnColor hover:text-mainColor"
+        {/* //paragraph to log in */}
+        <motion.p
+          className="mt-8 text-center text-sm text-gray-400"
+          initial={{ x: "-20%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            ease: [0.22, 1, 0.36, 1],
+            duration: 1.5,
+            delay: 1,
+          }}
         >
-          Login here <ArrowRight className="inline h-4 w-4" />
-        </Link>
-      </motion.p>
+          Already have an account?{" "}
+          <Link
+            to="/login"
+            className="font-medium text-btnColor hover:text-mainColor"
+          >
+            Login here <ArrowRight className="inline h-4 w-4" />
+          </Link>
+        </motion.p>
+      </div>
     </div>
   );
 };

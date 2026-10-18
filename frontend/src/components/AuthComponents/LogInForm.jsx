@@ -25,7 +25,7 @@ const LogInForm = () => {
     login(formData);
   };
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center font-Grotesk leading-normal">
+    <div className="w-full pb-20 h-screen flex flex-col items-center justify-around lg:justify-center font-Grotesk leading-normal">
       <div className="z-5 relative w-[70%] ">
         <div className="overflow-hidden mb-10 pb-1">
           <motion.h2
@@ -36,7 +36,7 @@ const LogInForm = () => {
               ease: [0.22, 1, 0.36, 1],
               delay: 0.5,
             }}
-            className="text-center text-[2vw] font-extrabold text-black"
+            className="text-center text-3xl lg:text-[2vw] font-extrabold text-black"
           >
             User LogIn
           </motion.h2>
@@ -127,26 +127,26 @@ const LogInForm = () => {
             )}
           </motion.button>
         </motion.form>
-      </div>
-      {/* //paragraph to log in */}
-      <motion.p
-        className="mt-8 text-center text-sm text-gray-400"
-        initial={{ x: "-20%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          ease: [0.22, 1, 0.36, 1],
-          duration: 1.5,
-          delay: 1,
-        }}
-      >
-        Don’t have an account yet?{" "}
-        <Link
-          to="/signup"
-          className="font-medium text-btnColor hover:text-mainColor"
+        {/* //paragraph to log in */}
+        <motion.p
+          className="mt-8 text-center text-sm text-gray-400"
+          initial={{ x: "-20%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            ease: [0.22, 1, 0.36, 1],
+            duration: 1.5,
+            delay: 1,
+          }}
         >
-          Register for free <ArrowRight className="inline h-4 w-4" />
-        </Link>
-      </motion.p>
+          Don’t have an account yet?{" "}
+          <Link
+            to="/signup"
+            className="font-medium text-btnColor hover:text-mainColor"
+          >
+            Register for free <ArrowRight className="inline h-4 w-4" />
+          </Link>
+        </motion.p>
+      </div>
     </div>
   );
 };
