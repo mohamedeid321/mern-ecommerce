@@ -59,17 +59,17 @@ const SectionOne = ({ id }) => {
   return (
     <section id={id} className="relative w-screen h-screen">
       {/* //title */}
-      <div className="relative pt-[14vh] mx-auto w-fit pointer-events-none ">
+      <div className="relative pt-[14vh] mx-auto  pointer-events-none ">
         <h1
           ref={titleRef}
-          className="will-change-transform px-20 text-center py-10 lg:px-10 lg:py-10
+          className="will-change-transform px-5 text-center py-10 lg:px-10 lg:py-10
            font-normal text-3xl lg:text-6xl font-Grotesk leading-normal"
         >
           A place to find your masterpiece.
         </h1>
       </div>
       {/* //paragraph */}
-      <div className="absolute bottom-[25vh] lg:bottom-[28vh] left-1/2 -translate-x-1/2 pointer-events-none ">
+      <div className="relative pt-70 lg:pt-80 mx-auto px-5 pointer-events-none ">
         <h1
           ref={title2Ref}
           className="will-change-transform font-normal text-center text-xl lg:text-xl font-Grotesk leading-normal"
@@ -80,14 +80,14 @@ const SectionOne = ({ id }) => {
       {/* //button join us */}
       <div
         ref={btnRef}
-        className="absolute bottom-[15vh] lg:bottom-[20vh] left-1/2 -translate-x-1/2 pointer-events-auto"
+        className="absolute left-1/2 -translate-x-1/2 pt-10 lg:pt-10 pointer-events-auto"
       >
         <Link
           to="/signup"
-          className=" flex justify-center py-2 px-15 border border-transparent 
+          className=" flex w-fit px-5 justify-center items-center  py-2 border border-transparent 
 							rounded-4xl shadow-sm text-xl font-medium text-white bg-black font-Grotesk leading-normal
-							 hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-offset-2 will-change-transform
-							  focus:ring-emerald-500 transition duration-200 ease-in-out disabled:opacity-50"
+							 hover:bg-mainColor will-change-transform
+							  transition duration-200 ease-in-out disabled:opacity-50"
         >
           <span>Join Us</span>
         </Link>
