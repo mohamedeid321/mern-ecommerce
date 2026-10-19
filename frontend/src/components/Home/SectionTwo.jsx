@@ -81,13 +81,12 @@ const SectionTwo = ({ id }) => {
         </h1>
       </div>
       {/* //paragraph */}
-      <div className="relative pt-[2vh] px-10 lg:pt-[8vh] lg:pl-40 pointer-events-none lg:w-[35vw] ">
+      <div className="relative pt-[2vh] px-5 lg:pt-[8vh] lg:pl-40 pointer-events-none lg:w-[35vw] ">
         <h1
           ref={section2Title2Ref}
           className="will-change-transform font-normal text-m lg:text-xl font-Grotesk leading-normal"
         >
-          Dynamic community where sellers and buyers seamlessly merge. ArtFusion
-          brings together creators and enterhusiasts to share creativity.
+          Dynamic community where sellers and buyers seamlessly merge.
         </h1>
       </div>
       {/* //button join us */}
