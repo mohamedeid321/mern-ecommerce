@@ -71,7 +71,7 @@ const SectionTwo = ({ id }) => {
       <div className="relative pt-[10vh] lg:pt-[16vh] left-0 lg:w-[37.5vw] ">
         <h1
           ref={section2TitleRef}
-          className="will-change-transform px-10 text-2xl 
+          className="will-change-transform px-5 text-2xl 
           lg:pl-40 
           lg:font-semibold lg:text-6xl font-Grotesk leading-normal"
         >
